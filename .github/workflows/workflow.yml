@@ -1,4 +1,5 @@
-name: ${{ github.actor }}
+name: CI
+run-name: ${{ github.actor }} is testing out GitHub Actions
 env:
   GITHUB_ACTIONS: "Testing Workflow"
 on:
