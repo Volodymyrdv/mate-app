@@ -1,0 +1,14 @@
+name: ${{ github.actor }}
+env:
+  GITHUB_ACTIONS: "Testing Workflow"
+on:
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  github-task-job:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "${{GITHUB_ACTIONS}}"
+    - run: echo "Name of the branch ${{ github.ref }} and repository ${{ github.repository }}"
+    - run: echo "Job was triggered by event ${{ github.event_name }}"
